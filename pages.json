@@ -1,0 +1,86 @@
+{
+  "pages": [{
+      "path": "pages/home/home"
+    },
+    {
+      "path": "pages/cate/cate"
+    },
+    {
+      "path": "pages/cart/cart"
+    },
+    {
+      "path": "pages/my/my"
+    }
+  ],
+  "subPackages": [{
+    "root": "subpkg",
+    "pages": [{
+        "path": "goods_detail/goods_detail",
+        "style": {
+          "navigationBarTitleText": ""
+        }
+      },
+      {
+        "path": "goods_list/goods_list",
+        "style": {
+          "navigationBarTitleText": "商品列表",
+          "onReachBottomDistance": 150, //上拉加载
+          "enablePullDownRefresh": true, //下拉刷新
+          "backgroundColor": "#C00000"
+        }
+      },
+      {
+        "path": "search/search",
+        "style": {
+          "navigationBarTitleText": ""
+        }
+      }
+
+    ]
+  }],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "黑马优购",
+    "navigationBarBackgroundColor": "#C00000",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "background": "#efeff4"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#C00000",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home_active.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "static/tab_icons/contact.png",
+        "selectedIconPath": "static/tab_icons/contact_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/tab_icons/message.png",
+        "selectedIconPath": "static/tab_icons/message_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab_icons/message.png",
+        "selectedIconPath": "static/tab_icons/message_active.png"
+      }
+    ]
+  },
+  "condition": { //模式配置，仅开发期间生效
+    "current": 0, //当前激活的模式(list 的索引项)
+    "list": [{
+      "name": "", //模式名称
+      "path": "", //启动页面，必选
+      "query": "" //启动参数，在页面的onLoad函数里面得到
+    }]
+  }
+}
